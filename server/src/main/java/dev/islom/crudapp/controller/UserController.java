@@ -4,7 +4,6 @@ package dev.islom.crudapp.controller;
 import dev.islom.crudapp.payload.ApiResponse;
 import dev.islom.crudapp.payload.UserDto;
 import dev.islom.crudapp.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
