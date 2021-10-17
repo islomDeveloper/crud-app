@@ -30,4 +30,16 @@ public class UserController {
         ApiResponse apiResponse = userService.getUsers();
         return ResponseEntity.status(apiResponse.isSuccess()?200:409).body(apiResponse);
     }
+
+    @PutMapping("editUser")
+    public HttpEntity<?> editUser(@RequestBody UserDto userDto){
+        ApiResponse apiResponse = userService.editUser(userDto);
+        return ResponseEntity.status(apiResponse.isSuccess()?204:409).body(apiResponse);
+    }
+
+    @DeleteMapping("deleteUser")
+    public HttpEntity<?> deleteUser(@RequestBody UserDto userDto){
+        ApiResponse apiResponse = userService.deleteUser(userDto);
+        return ResponseEntity.status(apiResponse.isSuccess()?204:409).body(apiResponse);
+    }
 }
